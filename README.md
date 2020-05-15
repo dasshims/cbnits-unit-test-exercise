@@ -12,4 +12,4 @@ Go to <Your Project directory>/target/site/jacoco/
 Open the file `index.html`. 
 Sample Jacoco report looks like below -
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Jacoco Report](https://github.com/himangshudas/cbnits-unit-test-exercise/blob/master/src/main/resources/jacoco.png)
