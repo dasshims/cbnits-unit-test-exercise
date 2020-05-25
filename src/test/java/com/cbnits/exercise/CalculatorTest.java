@@ -1,33 +1,48 @@
 package com.cbnits.exercise;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
+
 import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
 
-    public Calculator calculator;
+    public static Calculator calculator;
 
+    //@BeforeClass runs once before the entire test fixture
     @BeforeClass
     public static void initializeCalculator(){
-        Calculator calculator = new Calculator();
+
+        //Mostly used when for opening connections to database or initializing a class
+         calculator = new Calculator();
     }
 
+    //@Before is executed before each @Test
     @Before
-    public static void before(){
-        System.out.println("Before test initialize resources");
+    public  void before(){
+        System.out.println("Running before each @Test start");
     }
 
-    @After
-    public static void after(){
-        System.out.println("After tests destroy resources");
-    }
     @Test
     public void testSum()  {
         int expectedResult = 3;
         int actualResult = calculator.sum(1, 2);
         assertEquals(expectedResult, actualResult);
     }
+
+    //@Before is executed after each @Test
+    @After
+    public  void after(){
+        System.out.println("Running @After after each @Test ends ");
+    }
+
+    //@AfterClass runs once after the entire test fixture
+    @AfterClass
+    public static void destroy(){
+
+        // Mostly used for closing database connections after all test runs.
+        //It will run even if there are test failures in between
+        calculator = null;
+
+    }
+
 }
