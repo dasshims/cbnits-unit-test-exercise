@@ -29,7 +29,7 @@ public class CalculatorTest {
         assertEquals(expectedResult, actualResult);
     }
 
-    //@Before is executed after each @Test
+    //@After is executed after each @Test
     @After
     public  void after(){
         System.out.println("Running @After after each @Test ends ");
