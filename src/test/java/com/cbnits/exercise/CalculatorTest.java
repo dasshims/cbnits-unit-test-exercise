@@ -2,6 +2,9 @@ package com.cbnits.exercise;
 
 import org.junit.*;
 
+import java.util.Arrays;
+
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
@@ -44,5 +47,4 @@ public class CalculatorTest {
         calculator = null;
 
     }
-
 }
