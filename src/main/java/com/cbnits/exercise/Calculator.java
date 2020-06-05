@@ -3,11 +3,13 @@ package com.cbnits.exercise;
 public class Calculator {
 
     public int sum(int a, int b) {
+        //Can be all the complex application logic.
         return a + b;
     }
 
     public int minus(int a, int b) {
-        return a + b;  // ERROR!!!
+
+        return a + b;
     }
 
     public int divide(int a, int b) {

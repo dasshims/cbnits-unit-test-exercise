@@ -35,7 +35,7 @@ public class CalculatorWithSwitch {
     }
 
     public static void writeToFile(double result, String path) throws IOException {
-        String thignToWriteToFile = "Result of calculaiton -- " + result;
-        Files.write(Paths.get(path), thignToWriteToFile.getBytes());
+        String thingsTowriteToFile = "Result of calculation -- " + result;
+        Files.write(Paths.get(path), thingsTowriteToFile.getBytes());
     }
 }

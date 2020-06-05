@@ -13,35 +13,35 @@ public class CalculatorTest {
 
     //@BeforeClass runs once before the entire test fixture
     @BeforeClass
-    public static void initializeCalculator(){
-
+    public static void initializeCalculator() {
         //Mostly used when for opening connections to database or initializing a class
-         calculator = new Calculator();
+        calculator = new Calculator();
     }
 
     //@Before is executed before each @Test
     @Before
-    public  void before(){
+    public void before() {
         System.out.println("Running before each @Test start");
     }
 
+    //Logic test
     @Test
-    public void testSum()  {
+    public void testSum() {
         int expectedResult = 3;
         int actualResult = calculator.sum(1, 2);
         assertEquals(expectedResult, actualResult);
     }
 
+
     //@After is executed after each @Test
     @After
-    public  void after(){
+    public void after() {
         System.out.println("Running @After after each @Test ends ");
     }
 
     //@AfterClass runs once after the entire test fixture
     @AfterClass
-    public static void destroy(){
-
+    public static void destroy() {
         // Mostly used for closing database connections after all test runs.
         //It will run even if there are test failures in between
         calculator = null;

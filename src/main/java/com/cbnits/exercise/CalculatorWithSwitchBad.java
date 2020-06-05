@@ -33,7 +33,7 @@ public class CalculatorWithSwitchBad {
         }
 
         //Writes result to file..
-        String thignToWriteToFile = "Result of calculaiton -- " + result;
-        Files.write(Paths.get("src/resources/output.txt"), thignToWriteToFile.getBytes());
+        String thingsTowriteToFile = "Result of calculation -- " + result;
+        Files.write(Paths.get("src/resources/output.txt"), thingsTowriteToFile.getBytes());
     }
 }
